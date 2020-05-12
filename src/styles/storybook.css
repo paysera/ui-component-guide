@@ -1,0 +1,21 @@
+section.info-section {
+    margin-bottom: 30px;
+}
+
+.grid-cell {
+    border: 1px dashed lightgray;
+}
+
+.grid-cell-content {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+
+    width: 100%;
+    height: 200px;
+    background: #f4f4f4;
+}
+
+.grid-cell-data {
+    padding: 0 15px;
+}
