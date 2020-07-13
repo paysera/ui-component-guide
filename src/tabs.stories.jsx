@@ -1,5 +1,7 @@
 import React from 'react';
-import { Tabs, Tab, NavDropdown, MenuItem, NavItem, Nav, Row, Col } from 'react-bootstrap';
+import {
+    Tabs, Tab, NavDropdown, MenuItem, NavItem, Nav, Row, Col,
+} from 'react-bootstrap';
 
 export default { title: 'Tabs' };
 

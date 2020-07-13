@@ -1,11 +1,15 @@
 import React from 'react';
-import { Tooltip, ButtonToolbar, Button, OverlayTrigger } from 'react-bootstrap';
+import {
+    Tooltip, ButtonToolbar, Button, OverlayTrigger,
+} from 'react-bootstrap';
 
 export default { title: 'Tooltips' };
 
 const tooltip = (
     <Tooltip id="tooltip">
-        <strong>Holy guacamole!</strong> Check this info.
+        <strong>Holy guacamole!</strong>
+        {' '}
+        Check this info.
     </Tooltip>
 );
 
@@ -13,22 +17,22 @@ export const Tooltips = () => (
     <div>
         <h2>Tooltip alignment</h2>
 
-        <div style={{height: 50}}>
+        <div style={{ height: 50 }}>
             <Tooltip placement="right" className="in" id="tooltip-right">
                 Tooltip right
             </Tooltip>
         </div>
-        <div style={{height: 50}}>
+        <div style={{ height: 50 }}>
             <Tooltip placement="top" className="in" id="tooltip-top">
                 Tooltip top
             </Tooltip>
         </div>
-        <div style={{height: 50}}>
+        <div style={{ height: 50 }}>
             <Tooltip placement="left" className="in" id="tooltip-left">
                 Tooltip left
             </Tooltip>
         </div>
-        <div style={{height: 50}}>
+        <div style={{ height: 50 }}>
             <Tooltip placement="bottom" className="in" id="tooltip-bottom">
                 Tooltip bottom
             </Tooltip>

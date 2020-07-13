@@ -13,12 +13,14 @@ import {
     Glyphicon,
     MenuItem,
     DropdownButton,
-    Row
+    Row,
 } from 'react-bootstrap';
 
 export default { title: 'Forms' };
 
-function FieldGroup({ id, label, help, ...props }) {
+function FieldGroup({
+    id, label, help, ...props
+}) {
     return (
         <FormGroup controlId={id}>
             <ControlLabel>{label}</ControlLabel>
@@ -30,7 +32,10 @@ function FieldGroup({ id, label, help, ...props }) {
 
 export const SupportedControls = () => (
     <div>
-        <h2 className="page-header">Supported controls <small>Checkbox, Radio, FormControl.Static, HelpBlock</small></h2>
+        <h2 className="page-header">
+            Supported controls
+            <small>Checkbox, Radio, FormControl.Static, HelpBlock</small>
+        </h2>
         <form>
             <FieldGroup
                 id="formControlsText"
@@ -60,16 +65,21 @@ export const SupportedControls = () => (
             </Radio>
 
             <FormGroup>
-                <Checkbox inline>1</Checkbox> <Checkbox inline>2</Checkbox>{' '}
+                <Checkbox inline>1</Checkbox>
+                {' '}
+                <Checkbox inline>2</Checkbox>
+                {' '}
                 <Checkbox inline>3</Checkbox>
             </FormGroup>
             <FormGroup>
                 <Radio name="radioGroup" inline>
                     1
-                </Radio>{' '}
+                </Radio>
+                {' '}
                 <Radio name="radioGroup" inline>
                     2
-                </Radio>{' '}
+                </Radio>
+                {' '}
                 <Radio name="radioGroup" inline>
                     3
                 </Radio>
@@ -114,29 +124,37 @@ export const FormLayouts = () => (
 
         <Form>
             <FormGroup controlId="formInlineName">
-                <ControlLabel>Name</ControlLabel>{' '}
+                <ControlLabel>Name</ControlLabel>
+                {' '}
                 <FormControl type="text" placeholder="Jane Doe" />
-            </FormGroup>{' '}
+            </FormGroup>
+            {' '}
             <FormGroup controlId="formInlineEmail">
-                <ControlLabel>Email</ControlLabel>{' '}
+                <ControlLabel>Email</ControlLabel>
+                {' '}
                 <FormControl type="email" placeholder="jane.doe@example.com" />
-            </FormGroup>{' '}
+            </FormGroup>
+            {' '}
             <Button type="submit">Send invitation</Button>
         </Form>
 
-        <hr/>
+        <hr />
 
         <h3>Inline forms</h3>
 
         <Form inline>
             <FormGroup controlId="formInlineName">
-                <ControlLabel>Name</ControlLabel>{' '}
+                <ControlLabel>Name</ControlLabel>
+                {' '}
                 <FormControl type="text" placeholder="Jane Doe" />
-            </FormGroup>{' '}
+            </FormGroup>
+            {' '}
             <FormGroup controlId="formInlineEmail">
-                <ControlLabel>Email</ControlLabel>{' '}
+                <ControlLabel>Email</ControlLabel>
+                {' '}
                 <FormControl type="email" placeholder="jane.doe@example.com" />
-            </FormGroup>{' '}
+            </FormGroup>
+            {' '}
             <Button type="submit">Send invitation</Button>
         </Form>
 
@@ -183,33 +201,45 @@ export const FormLayouts = () => (
             <Row>
                 <Col xs={24} md={8}>
                     <FormGroup controlId="formInlineName">
-                        <ControlLabel>Input a</ControlLabel>{' '}
+                        <ControlLabel>Input a</ControlLabel>
+                        {' '}
                         <FormControl type="text" />
-                    </FormGroup>{' '}
+                    </FormGroup>
+                    {' '}
                     <FormGroup controlId="formInlineEmail">
-                        <ControlLabel>Input b</ControlLabel>{' '}
+                        <ControlLabel>Input b</ControlLabel>
+                        {' '}
                         <FormControl type="email" />
-                    </FormGroup>{' '}
+                    </FormGroup>
+                    {' '}
                 </Col>
                 <Col xs={24} md={8}>
                     <FormGroup controlId="formInlineName">
-                        <ControlLabel>Input c</ControlLabel>{' '}
-                        <FormControl type="text"/>
-                    </FormGroup>{' '}
+                        <ControlLabel>Input c</ControlLabel>
+                        {' '}
+                        <FormControl type="text" />
+                    </FormGroup>
+                    {' '}
                     <FormGroup controlId="formInlineEmail">
-                        <ControlLabel>Input d</ControlLabel>{' '}
+                        <ControlLabel>Input d</ControlLabel>
+                        {' '}
                         <FormControl type="email" />
-                    </FormGroup>{' '}
+                    </FormGroup>
+                    {' '}
                 </Col>
                 <Col xs={24} md={8}>
                     <FormGroup controlId="formInlineName">
-                        <ControlLabel>Input e</ControlLabel>{' '}
+                        <ControlLabel>Input e</ControlLabel>
+                        {' '}
                         <FormControl type="text" />
-                    </FormGroup>{' '}
+                    </FormGroup>
+                    {' '}
                     <FormGroup controlId="formInlineEmail">
-                        <ControlLabel>Input f</ControlLabel>{' '}
-                        <FormControl type="email"  />
-                    </FormGroup>{' '}
+                        <ControlLabel>Input f</ControlLabel>
+                        {' '}
+                        <FormControl type="email" />
+                    </FormGroup>
+                    {' '}
                 </Col>
                 <Col xs={24}>
                     <div><Button type="submit">Submit</Button></div>
@@ -389,12 +419,15 @@ export const ValidationStates = () => (
 
         <Form componentClass="fieldset" inline>
             <FormGroup controlId="formValidationWarning4" validationState="warning">
-                <ControlLabel>Input with warning</ControlLabel>{' '}
+                <ControlLabel>Input with warning</ControlLabel>
+                {' '}
                 <FormControl type="text" />
                 <FormControl.Feedback />
-            </FormGroup>{' '}
+            </FormGroup>
+            {' '}
             <FormGroup controlId="formValidationError4" validationState="error">
-                <ControlLabel>Input group with error</ControlLabel>{' '}
+                <ControlLabel>Input group with error</ControlLabel>
+                {' '}
                 <InputGroup>
                     <InputGroup.Addon>@</InputGroup.Addon>
                     <FormControl type="text" />
@@ -409,7 +442,10 @@ export const ValidationStates = () => (
 
         {/* This requires React 15's <span>-less spaces to be exactly correct. */}
         <FormGroup validationState="success">
-            <Checkbox inline>Checkbox</Checkbox> <Checkbox inline>with</Checkbox>{' '}
+            <Checkbox inline>Checkbox</Checkbox>
+            {' '}
+            <Checkbox inline>with</Checkbox>
+            {' '}
             <Checkbox inline>success</Checkbox>
         </FormGroup>
     </form>
