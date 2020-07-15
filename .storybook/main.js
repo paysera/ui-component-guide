@@ -3,15 +3,6 @@ const webpack = require('webpack');
 module.exports = {
     addons: ['@storybook/addon-backgrounds/register'],
     stories: ['../src/**/*.stories.jsx'],
-    webpackFinal: async (config) => {
-        config.plugins.push(
-            new webpack.ProvidePlugin({
-                jQuery: "jquery"
-            })
-        );
-
-        return config;
-    },
 };
 
 // TODO`s:

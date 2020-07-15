@@ -1,9 +1,8 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-
+import { Dropdown, MenuItem } from 'react-bootstrap';
 import TwoLineCell from '../Components/TwoLineCell';
 import ExpanderButton from '../Components/ExpanderButton';
-import DottedDropdownMenu from '../Components/DottedDropdownMenu';
+import CustomToggle from '../Components/CustomToggle';
 
 const columns = [{
     Header: <strong>Date</strong>,
@@ -47,22 +46,38 @@ const columns = [{
 }, {
     id: 'actions',
     Header: () => (
-        <div className="row">
-            <div className="col-xs-22"><strong>Actions</strong></div>
-            <div className="col-xs-2">
-                <DottedDropdownMenu
-                    customClass="pull-right"
-                    dropdownContent={[<Button bsStyle="link">Repeat</Button>, <Button bsStyle="link">Export to PDF</Button>, <Button bsStyle="link">Print</Button>]}
-                />
-            </div>
-        </div>
+        <Dropdown id="dropdown-custom-menu" className="pull-right">
+            <CustomToggle bsRole="toggle" />
+            <Dropdown.Menu className="dropdown-menu-right">
+                <MenuItem eventKey="1">
+                    <button className="btn btn-link" type="button">Repeat</button>
+                </MenuItem>
+                <MenuItem eventKey="2">
+                    <button className="btn btn-link" type="button">Export to PDF</button>
+                </MenuItem>
+                <MenuItem eventKey="3">
+                    <button className="btn btn-link" type="button">Print</button>
+                </MenuItem>
+            </Dropdown.Menu>
+        </Dropdown>
     ),
-    headerClassName: 'andes-table-mobile-header',
+    headerClassName: 'andes-table-mobile-header pull-right',
     // eslint-disable-next-line react/prop-types
     Cell: () => (
-        <DottedDropdownMenu
-            dropdownContent={[<Button bsStyle="link">Repeat</Button>, <Button bsStyle="link">Export to PDF</Button>, <Button bsStyle="link">Print</Button>]}
-        />
+        <Dropdown id="dropdown-custom-menu">
+            <CustomToggle bsRole="toggle" />
+            <Dropdown.Menu className="dropdown-menu-right">
+                <MenuItem eventKey="1">
+                    <button className="btn btn-link" type="button">Repeat</button>
+                </MenuItem>
+                <MenuItem eventKey="2">
+                    <button className="btn btn-link" type="button">Export to PDF</button>
+                </MenuItem>
+                <MenuItem eventKey="3">
+                    <button className="btn btn-link" type="button">Print</button>
+                </MenuItem>
+            </Dropdown.Menu>
+        </Dropdown>
     ),
     className: 'action-cell menu-button hidden-xs',
 }];
