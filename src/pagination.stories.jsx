@@ -3,11 +3,11 @@ import { Pager, Pagination } from 'react-bootstrap';
 
 export default { title: 'Pagination' };
 
-let active = 7;
-let items = [];
+const active = 7;
+const items = [];
 for (let number = 1; number <= 10; number++) {
     items.push(
-        <Pagination.Item active={number === active}>{number}</Pagination.Item>
+        <Pagination.Item active={number === active}>{number}</Pagination.Item>,
     );
 }
 
@@ -17,7 +17,8 @@ export const Pagers = () => (
 
         <p>Centered by default</p>
         <Pager>
-            <Pager.Item href="#">Previous</Pager.Item>{' '}
+            <Pager.Item href="#">Previous</Pager.Item>
+            {' '}
             <Pager.Item href="#">Next</Pager.Item>
         </Pager>
 

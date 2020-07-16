@@ -1,5 +1,7 @@
 import React from 'react';
-import { Grid, Row, Col, Image, Thumbnail, Button } from 'react-bootstrap';
+import {
+    Grid, Row, Col, Image, Thumbnail, Button,
+} from 'react-bootstrap';
 
 export default { title: 'Images' };
 
@@ -24,7 +26,12 @@ export const Images = () => (
         <h2>Responsiveness</h2>
 
         <div>
-            <p>Use the <code>responsive</code> to scale image nicely to the parent element.</p>
+            <p>
+                Use the
+                <code>responsive</code>
+                {' '}
+                to scale image nicely to the parent element.
+            </p>
             <Image src="https://via.placeholder.com/180" responsive />
         </div>
 

@@ -1,6 +1,8 @@
+const webpack = require('webpack');
+
 module.exports = {
     addons: ['@storybook/addon-backgrounds/register'],
-    stories: ['../src/**/*.stories.[tj]s'],
+    stories: ['../src/**/*.stories.jsx'],
 };
 
 // TODO`s:
