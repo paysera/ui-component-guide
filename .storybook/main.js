@@ -1,8 +1,39 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     addons: ['@storybook/addon-backgrounds/register'],
     stories: ['../src/**/*.stories.jsx'],
+    webpackFinal: async (config, { configType }) => {
+        config.resolve.alias.modernizr$ = path.resolve(__dirname, '../node_modules/@paysera/modernizr-config/.modernizrrc.js');
+        config.module.rules.push(
+            {
+                test: /\.modernizrrc\.js$/,
+                use: ['webpack-modernizr-loader'],
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    require.resolve('style-loader'),
+                    {
+                        loader: require.resolve('css-loader'),
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                localIdentName: '[name]__[local]___[hash:base64:5]'
+                            }
+                        },
+                    },
+                    require.resolve('less-loader')
+                ],
+
+            },
+        );
+        config.node = {
+            fs: 'empty'
+        };
+        return config;
+    },
 };
 
 // TODO`s:

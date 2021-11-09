@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@paysera/react-common": "^3.16.3",
     "font-awesome": "^4.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -15,6 +16,7 @@
     "@babel/core": "^7.9.0",
     "@paysera/eslint-config": "^1.0.0",
     "@paysera/eslint-config-base": "^1.1.0",
+    "@paysera/modernizr-config": "^1.0.0",
     "@storybook/addon-backgrounds": "^5.3.18",
     "@storybook/react": "^5.3.18",
     "@storybook/storybook-deployer": "^2.8.3",
@@ -22,7 +24,14 @@
     "eslint": "^5.4.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "less": "^3.12.2",
+    "less-loader": "^6.2.0",
+    "modernizr": "^3.11.4",
+    "webpack-modernizr-loader": "^5.0.0"
+  },
+  "peerDependencies": {
+    "coa": "^2.0.2"
   },
   "scripts": {
     "storybook": "start-storybook",
