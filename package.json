@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@paysera/react-common": "^3.16.3",
-    "coa": "^2.0.2",
+    "coa": "2.0.2",
     "font-awesome": "^4.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
