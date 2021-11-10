@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{1395:function(o,e,n){"use strict";n.r(e);n(0);var t=n(117),a=n(474),r=Object(a.create)({appBorderRadius:0,brandTitle:"Paysera Storybook",brandUrl:"https://www.paysera.com"});t.addons.setConfig({theme:r})},475:function(o,e,n){n(476),n(623),n(1395),o.exports=n(1387)},540:function(o,e){}},[[475,1,2]]]);
