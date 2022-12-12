@@ -2,7 +2,10 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    addons: ['@storybook/addon-backgrounds/register'],
+    addons: [
+        '@storybook/addon-backgrounds/register',
+        '@storybook/addon-essentials'
+    ],
     stories: ['../src/**/*.stories.jsx'],
     webpackFinal: async (config, { configType }) => {
         config.resolve.alias.modernizr$ = path.resolve(__dirname, '../node_modules/@paysera/modernizr-config/.modernizrrc.js');
