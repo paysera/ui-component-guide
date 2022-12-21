@@ -22,9 +22,6 @@ module.exports = {
                         loader: require.resolve('css-loader'),
                         options: {
                             importLoaders: 1,
-                            modules: {
-                                localIdentName: '[name]__[local]___[hash:base64:5]'
-                            }
                         },
                     },
                     require.resolve('less-loader')

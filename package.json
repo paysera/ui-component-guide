@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@paysera/react-common": "^3.16.9",
+    "@paysera/react-common": "^3.17.2",
     "@storybook/addon-essentials": "^6.5.14",
     "coa": "2.0.2",
     "font-awesome": "^4.7.0",
@@ -13,7 +13,10 @@
     "react": "^16.13.1",
     "react-bootstrap": "^0.33.1",
     "react-dom": "^16.13.1",
-    "react-table": "^6.9.2"
+    "react-redux": "5.1.1",
+    "react-table": "^6.9.2",
+    "redux": "3.7.2",
+    "redux-form": "^7.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
