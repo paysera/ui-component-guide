@@ -35,13 +35,21 @@ export default {
 };
 
 const Template = args => (
-    <Clearfix {...args} style={{ border: 'dashed red', padding: '8px' }}>
-        <Row style={{ borderBottom: 'dashed red' }}>
-            <Col md={8}>test1</Col>
-            <Col md={4}>test1</Col>
+    <Clearfix {...args}>
+        <Row className="show-row">
+            <Col xs={12} md={8} className="show-col">
+                <code>
+                    {'<Col xs={12} md={8}/>'}
+                </code>
+            </Col>
+            <Col xs={6} md={4} className="show-col">
+                <code>{'<Col xs={6} md={4}/>'}</code>
+            </Col>
         </Row>
         <Row>
-            <Col lg={6}>test2</Col>
+            <Col xs={6} xsOffset={6} className="show-col">
+                <code>{'<Col xs={6} xsOffset={6}/>'}</code>
+            </Col>
         </Row>
     </Clearfix>
 );

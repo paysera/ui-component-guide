@@ -104,9 +104,9 @@ export default {
 
 const Template = args => (
     <>
-        <Row style={{ border: 'dashed red' }}>
-            <Col {...args}>test</Col>
-            <Col {...args}>test</Col>
+        <Row>
+            <Col {...args} className="show-col">test</Col>
+            <Col {...args} className="show-col">test</Col>
         </Row>
     </>
 );

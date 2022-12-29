@@ -20,12 +20,20 @@ export default {
 
 const Template = args => (
     <>
-        <Row {...args} style={{ borderBottom: 'dashed red' }}>
-            <Col xs={12} md={8}>test1</Col>
-            <Col xs={6} md={4}>test1</Col>
+        <Row {...args} className="show-row">
+            <Col xs={12} md={8} className="show-col">
+                <code>
+                    {'<Col xs={12} md={8}/>'}
+                </code>
+            </Col>
+            <Col xs={6} md={4} className="show-col">
+                <code>{'<Col xs={6} md={4}/>'}</code>
+            </Col>
         </Row>
         <Row {...args}>
-            <Col xs={6} xsOffset={6}>test2</Col>
+            <Col xs={6} xsOffset={6} className="show-col">
+                <code>{'<Col xs={6} xsOffset={6}/>'}</code>
+            </Col>
         </Row>
     </>
 );
