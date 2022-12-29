@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@paysera/react-common": "^3.17.2",
+    "@paysera/react-common": "^3.17.3",
     "@storybook/addon-essentials": "^6.5.14",
     "coa": "2.0.2",
     "font-awesome": "^4.7.0",
