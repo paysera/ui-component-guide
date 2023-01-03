@@ -2,22 +2,16 @@ import React from 'react';
 import { Glyphicon } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
 import { PAYSERA_COMPONENTS } from '../const';
-import { GLYPHICON_VARIANT } from './const';
 
 export default {
     title: `${PAYSERA_COMPONENTS}/Glyphicons`,
     component: Glyphicon,
     argTypes: {
         glyph: {
-            options: GLYPHICON_VARIANT,
-            control: { type: 'radio' },
-            ...getComponentPropType(GLYPHICON_VARIANT, 'align-left'),
+            control: 'text',
+            ...getComponentPropType('text'),
         },
         bsClass: {
-            control: 'text',
-            ...getComponentPropType('string'),
-        },
-        closeLabel: {
             control: 'text',
             ...getComponentPropType('string'),
         },
@@ -26,6 +20,7 @@ export default {
 
 const Template = args => <Glyphicon {...args} />;
 
+export const CustomGlyph = Template.bind({});
 export const AlignLeft = Template.bind({});
 export const AlignCenter = Template.bind({});
 export const AlignRight = Template.bind({});
