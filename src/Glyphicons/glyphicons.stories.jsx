@@ -20,7 +20,6 @@ export default {
 
 const Template = args => <Glyphicon {...args} />;
 
-export const CustomGlyph = Template.bind({});
 export const AlignLeft = Template.bind({});
 export const AlignCenter = Template.bind({});
 export const AlignRight = Template.bind({});
