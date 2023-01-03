@@ -1,8 +1,8 @@
 import React from 'react';
 import { Badge } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
-import { CHILDREN_TYPE, PAYSERA_COMPONENTS } from '../const';
-import { BADGE_VARIANT } from './const';
+import { PAYSERA_COMPONENTS } from '../const';
+import { PULL_RIGHT_VARIANT } from './const';
 
 export default {
     title: `${PAYSERA_COMPONENTS}/Badges`,
@@ -15,41 +15,27 @@ export default {
             control: 'text',
             ...getComponentPropType('string'),
         },
+        pullRight: {
+            options: PULL_RIGHT_VARIANT,
+            control: { type: 'radio' },
+            ...getComponentPropType(PULL_RIGHT_VARIANT, false),
+        },
         bsClass: {
             control: 'text',
-            ...getComponentPropType(CHILDREN_TYPE),
-        },
-        closeLabel: {
-            control: 'text',
-            ...getComponentPropType('string'),
-        },
-        bsStyle: {
-            options: BADGE_VARIANT,
-            control: { type: 'radio' },
-            ...getComponentPropType(BADGE_VARIANT, 'danger'),
+            ...getComponentPropType('text'),
         },
     },
 };
 
 const Template = args => <Badge {...args} />;
 
-export const Success = Template.bind({});
-export const Danger = Template.bind({});
-export const Warning = Template.bind({});
-export const Info = Template.bind({});
+export const pullRightFalse = Template.bind({});
+export const pullRightTrue = Template.bind({});
 
-Success.args = {
-    bsStyle: 'success',
+pullRightFalse.args = {
+    pullRight: false,
 };
 
-Danger.args = {
-    bsStyle: 'danger',
-};
-
-Warning.args = {
-    bsStyle: 'warning',
-};
-
-Info.args = {
-    bsStyle: 'info',
+pullRightTrue.args = {
+    pullRight: true,
 };

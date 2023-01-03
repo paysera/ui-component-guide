@@ -1,6 +1,1 @@
-export const BADGE_VARIANT = [
-    'success',
-    'danger',
-    'warning',
-    'info',
-];
+export const PULL_RIGHT_VARIANT = [false, true];
