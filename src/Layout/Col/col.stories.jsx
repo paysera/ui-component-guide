@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Row } from '@paysera/react-common';
 import { PAYSERA_COMPONENTS } from '../../const';
 import { getComponentPropType } from '../../utils/getComponentPropType';
+import '../../styles/storybook.css';
 
 export default {
     title: `${PAYSERA_COMPONENTS}/Layout/Col`,
@@ -105,8 +106,16 @@ export default {
 const Template = args => (
     <>
         <Row>
-            <Col {...args} className="show-col">test</Col>
-            <Col {...args} className="show-col">test</Col>
+            <Col {...args}>
+                <code>
+                    {'<Col xs={12} md={8}/>'}
+                </code>
+            </Col>
+            <Col {...args}>
+                <code>
+                    {'<Col xs={12} md={8}/>'}
+                </code>
+            </Col>
         </Row>
     </>
 );
