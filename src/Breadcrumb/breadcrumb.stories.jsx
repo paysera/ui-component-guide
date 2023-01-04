@@ -1,5 +1,5 @@
-import { Breadcrumb } from '@paysera/react-common';
 import React from 'react';
+import { Breadcrumb } from '@paysera/react-common';
 import { PAYSERA_COMPONENTS } from '../const';
 import { getComponentPropType } from '../utils/getComponentPropType';
 
