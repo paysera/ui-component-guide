@@ -1,11 +1,11 @@
 import React from 'react';
-import { Glyphicon } from '@paysera/react-common';
+import { Glyphicon as GlyphiconComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
 import { PAYSERA_COMPONENTS } from '../const';
 
 export default {
     title: `${PAYSERA_COMPONENTS}/Glyphicons`,
-    component: Glyphicon,
+    component: GlyphiconComponent,
     argTypes: {
         glyph: {
             control: 'text',
@@ -18,30 +18,10 @@ export default {
     },
 };
 
-const Template = args => <Glyphicon {...args} />;
+const Template = args => <GlyphiconComponent {...args} />;
 
-export const AlignLeft = Template.bind({});
-export const AlignCenter = Template.bind({});
-export const AlignRight = Template.bind({});
-export const AlignJustify = Template.bind({});
-export const Star = Template.bind({});
+export const Glyphicon = Template.bind({});
 
-AlignLeft.args = {
+Glyphicon.args = {
     glyph: 'align-left',
-};
-
-AlignCenter.args = {
-    glyph: 'align-center',
-};
-
-AlignRight.args = {
-    glyph: 'align-right',
-};
-
-AlignJustify.args = {
-    glyph: 'align-justify',
-};
-
-Star.args = {
-    glyph: 'star',
 };
