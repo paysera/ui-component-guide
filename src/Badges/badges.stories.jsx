@@ -28,6 +28,3 @@ export default {
 const Template = args => <BadgeComponent {...args} />;
 
 export const Badge = Template.bind({});
-
-Badge.args = {
-};
