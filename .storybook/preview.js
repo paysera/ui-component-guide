@@ -1,15 +1,18 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
 import '../src/styles/theme.css';
 import '../src/styles/storybook.css';
 import 'font-awesome/css/font-awesome.css';
 
-export const  parameters = {
+export const parameters = {
     docs: {
         source: {
             type: 'dynamic',
             excludeDecorators: true,
+            container: DocsContainer,
+            page: DocsPage,
         },
     },
 }

@@ -5,7 +5,7 @@ import TwoLineCell from '../Components/TwoLineCell';
 import ExpanderButton from '../Components/ExpanderButton';
 import CustomToggle from '../Components/CustomToggle';
 
-export default [
+export const getFieldColumns = [
     {
         id: 'date',
         Header: 'Date',
@@ -43,9 +43,7 @@ export default [
     },
     {
         id: 'expander',
-        expander: true,
         Header: () => <strong>Actions</strong>,
-        // eslint-disable-next-line react/prop-types
         Expander: ({ isExpanded }) => <ExpanderButton isExpanded={!!isExpanded} />,
         headerClassName: 'hidden-xs actions-header',
         className: 'action-cell text-right',

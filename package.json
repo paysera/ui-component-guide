@@ -20,10 +20,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-react-jsx": "^7.20.7",
+    "@mdx-js/loader": "^2.2.1",
     "@paysera/eslint-config": "^1.0.0",
     "@paysera/eslint-config-base": "^1.1.0",
     "@paysera/modernizr-config": "^1.0.0",
     "@storybook/addon-backgrounds": "^6.5.14",
+    "@storybook/addon-docs": "^6.5.15",
     "@storybook/react": "^6.5.14",
     "@storybook/storybook-deployer": "^2.8.16",
     "babel-loader": "^8.1.0",
