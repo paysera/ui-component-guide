@@ -32,6 +32,18 @@ import { getFieldColumns } from './data/columns';
 
 ---
 
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+        data: data,
+        columns: getFieldColumns,
+    }}
+  >
+  {stories.AndesDataTable.bind({})}
+  </Story>
+</Canvas>
+
 ## `With Expander`
 
 <Canvas>
