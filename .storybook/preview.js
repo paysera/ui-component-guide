@@ -4,6 +4,7 @@ import { addDecorator } from '@storybook/react';
 import '../src/styles/theme.css';
 import '../src/styles/storybook.css';
 import 'font-awesome/css/font-awesome.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 export const  parameters = {
     docs: {

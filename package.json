@@ -6,6 +6,7 @@
   "dependencies": {
     "@paysera/react-common": "^3.17.3",
     "@storybook/addon-essentials": "^6.5.14",
+    "bootstrap": "^3.4.1",
     "coa": "2.0.2",
     "font-awesome": "^4.7.0",
     "html-webpack-plugin": "^5.5.0",
