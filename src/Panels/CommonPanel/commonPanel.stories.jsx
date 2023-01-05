@@ -32,7 +32,7 @@ export default {
 };
 
 const Template = args => (
-    <Panel {...args} className='panel'>
+    <Panel {...args}>
         <Panel.Heading>
             <Panel.Title>Panel heading</Panel.Title>
         </Panel.Heading>

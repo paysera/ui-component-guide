@@ -20,8 +20,8 @@ export default {
 
 const Template = args => (
     <Panel>
-        <Panel.Body className='panel-heading' {...args}>Panel content</Panel.Body>
-        <Panel.Footer>Panel footer</Panel.Footer>
+        <Panel.Body>Panel content</Panel.Body>
+        <Panel.Footer {...args}>Panel footer</Panel.Footer>
     </Panel>
 );
 
