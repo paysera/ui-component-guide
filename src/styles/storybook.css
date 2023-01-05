@@ -29,3 +29,27 @@ section.info-section {
 .row {
     margin-bottom: 15px;
 }
+
+.tooltip.top {
+    position: absolute;
+    top: 158px !important;
+    left: 176px !important;
+}
+
+.tooltip.right {
+    position: absolute;
+    top: 201px !important;
+    left: 271px !important;
+}
+
+.tooltip.left {
+    position: absolute;
+    top: 201px !important;
+    left: 66px !important;
+}
+
+.tooltip.bottom {
+    position: absolute;
+    top: 233px !important;
+    left: 176px !important;
+}
