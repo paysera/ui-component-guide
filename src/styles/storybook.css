@@ -19,3 +19,13 @@ section.info-section {
 .grid-cell-data {
     padding: 0 15px;
 }
+
+.col-xs-12, .col-xs-6 .col-md-8, .col-md-4, .col-md-6, .col-xs-offset-6 {
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+    padding: 10px;
+}
+
+.row {
+    margin-bottom: 15px;
+}
