@@ -19,11 +19,3 @@ section.info-section {
 .grid-cell-data {
     padding: 0 15px;
 }
-
-.panel {
-    border: solid 1px #ddd;
-}
-
-.panel-footer {
-    background: #f5f5f5 !important;
-}

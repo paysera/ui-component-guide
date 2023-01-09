@@ -20527,12 +20527,6 @@ table.dataTable thead .sorting:after {
     margin-right: -15px;
   }
 }
-.panel {
-  margin-bottom: 30px;
-  border-width: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
 .panel .panel-heading {
   font-weight: 500;
   font-size: 16px;
@@ -20562,19 +20556,6 @@ table.dataTable thead .sorting:after {
   font-size: 14px;
   text-transform: uppercase;
 }
-.panel .panel-footer {
-  background: #ffffff;
-  padding: 20px 25px;
-}
-.panel-default {
-  border-color: #b5c2ca;
-  color: #263238;
-}
-.panel-default .panel-heading {
-  color: #263238;
-  background-color: #ffffff;
-  border-bottom: 1px solid #b5c2ca;
-}
 .panel-default .panel-action a {
   color: #263238;
   opacity: 0.5;
@@ -20582,10 +20563,6 @@ table.dataTable thead .sorting:after {
 .panel-default .panel-action a:hover {
   opacity: 1;
   color: #263238;
-}
-.panel-default .panel-footer {
-  background: #ffffff;
-  border-top: 1px solid #b5c2ca;
 }
 .fa-fw {
   width: 20px!important;
@@ -21268,9 +21245,6 @@ ul.common li a:hover {
   font-size: 14px;
   text-align: right;
   width: 25px;
-}
-.panel-group .panel .panel-heading + .panel-collapse .panel-body {
-  border-top: none;
 }
 .panel-group .panel-heading {
   padding: 12px 20px;
