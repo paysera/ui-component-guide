@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Overlay, Tooltip } from '@paysera/react-common';
 import { PAYSERA_COMPONENTS } from '../const';
 import { getComponentPropType } from '../utils/getComponentPropType';
@@ -55,21 +55,21 @@ export default {
 
 const Template = (args) => {
     const [show, setShow] = useState(false);
+    const target = useRef(null);
     return (
         <>
             <Button
-                style={{ marginLeft: 145 }}
+                ref={target}
                 onClick={() => setShow(prevState => !prevState)}
             >
                 Click me!
             </Button>
-            <Overlay {...args} show={show}>
+            <Overlay {...args} target={target.current} show={show}>
                 <Tooltip>Tooltip overload!</Tooltip>
             </Overlay>
         </>
     );
 };
-
 export const OverlayComponent = Template.bind({});
 OverlayComponent.args = {
 };
