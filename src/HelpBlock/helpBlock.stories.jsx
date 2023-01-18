@@ -21,6 +21,3 @@ const Template = args => (
 );
 
 export const HelpBlockComponent = Template.bind({});
-
-HelpBlockComponent.args = {
-};
