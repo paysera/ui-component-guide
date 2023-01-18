@@ -4,9 +4,16 @@ const path = require('path');
 module.exports = {
     addons: [
         '@storybook/addon-backgrounds/register',
-        '@storybook/addon-essentials'
+        '@storybook/addon-essentials',
+        {
+            name: '@storybook/addon-docs',
+            options: {
+              sourceLoaderOptions: null,
+              transcludeMarkdown: true,
+            },
+        },
     ],
-    stories: ['../src/**/*.stories.jsx'],
+    stories: ['../src/**/*.stories.@(jsx|mdx)'],
     webpackFinal: async (config, { configType }) => {
         config.resolve.alias.modernizr$ = path.resolve(__dirname, '../node_modules/@paysera/modernizr-config/.modernizrrc.js');
         config.module.rules.push(
@@ -26,7 +33,6 @@ module.exports = {
                     },
                     require.resolve('less-loader')
                 ],
-
             },
         );
         config.node = {
