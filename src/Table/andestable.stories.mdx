@@ -5,6 +5,9 @@ import * as stories from './andestable.stories.jsx';
 import ExpanderComponent from './Components/ExpanderComponent';
 import data from './data/data';
 import { getFieldColumns } from './data/columns';
+import WithExpander from './examples/WithExpander';
+import WithPagination from './examples/WithPagination';
+import WithFilters from './examples/WithFilters';
 
 <Meta
     title="Paysera Components/Table/AndesTable"
@@ -46,18 +49,7 @@ import { getFieldColumns } from './data/columns';
 
 ## `With Expander`
 
-<Canvas>
-  <Story
-    name="With Expander"
-    args={{
-        data: data,
-        columns: getFieldColumns,
-        SubComponent: ExpanderComponent,
-    }}
-  >
-  {stories.AndesDataTable.bind({})}
-  </Story>
-</Canvas>
+<ExampleCodeBlock code={WithExpander} />
 
 #### *SubComponent code*
 
@@ -100,30 +92,8 @@ import { getFieldColumns } from './data/columns';
 
 ## `With Pagination`
 
-<Canvas>
-  <Story
-    name="With Pagination"
-    args={{
-        data: data,
-        columns: getFieldColumns,
-        showPagination: true,
-        pageSizeOptions: [5, 10, 20, 25, 50, 100],
-    }}
-  >
-  {stories.AndesDataTable.bind({})}
-  </Story>
-</Canvas>
+<ExampleCodeBlock code={WithPagination} />
 
 ## `With Filters`
 
-<Canvas>
-  <Story
-    name="with Filters"
-    args={{
-        data: data,
-        columns: getFieldColumns,
-        filterable: true,
-    }}>
-    {stories.AndesDataTable.bind({})}
-  </Story>
-</Canvas>
+<ExampleCodeBlock code={WithFilters} />
