@@ -1,12 +1,11 @@
 import React from 'react';
-import { Col, Row, Clearfix } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { Col, Row, Clearfix as ClearfixComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import '../../styles/storybook.css';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Layout/Clearfix`,
-    component: Clearfix,
+    title: 'Layout/Clearfix',
+    component: ClearfixComponent,
     argTypes: {
         visibleXsBlock: {
             control: 'boolean',
@@ -36,7 +35,7 @@ export default {
 };
 
 const Template = args => (
-    <Clearfix {...args}>
+    <ClearfixComponent {...args}>
         <Row>
             <Col xs={12} md={8}>
                 <code>
@@ -52,9 +51,7 @@ const Template = args => (
                 <code>{'<Col xs={6} xsOffset={6}/>'}</code>
             </Col>
         </Row>
-    </Clearfix>
+    </ClearfixComponent>
 );
 
-export const ClearfixComponent = Template.bind({});
-ClearfixComponent.args = {
-};
+export const Clearfix = Template.bind({});

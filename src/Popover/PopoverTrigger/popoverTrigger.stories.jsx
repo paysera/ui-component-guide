@@ -1,29 +1,26 @@
 import React from 'react';
 import {
-    Button, ButtonToolbar, OverlayTrigger, Popover,
+    Button, ButtonToolbar, OverlayTrigger as OverlayTriggerComponent, Popover as PopoverComponent,
 } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
-import { PopoverComponent } from '../popover.stories';
+import { Popover } from '../popover.stories';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Popover/PopoverTrigger`,
-    component: Popover,
+    title: 'Popover Components/OverlayTrigger',
+    component: PopoverComponent,
 };
 
 const Template = args => (
     <ButtonToolbar {...args}>
-        <OverlayTrigger trigger="click" placement="bottom" overlay={<PopoverComponent />}>
+        <OverlayTriggerComponent trigger="click" placement="bottom" overlay={<Popover />}>
             <Button>Click Popover</Button>
-        </OverlayTrigger>
-        <OverlayTrigger trigger="focus" placement="top" overlay={<PopoverComponent />}>
+        </OverlayTriggerComponent>
+        <OverlayTriggerComponent trigger="focus" placement="top" overlay={<Popover />}>
             <Button>Focus Popover</Button>
-        </OverlayTrigger>
-        <OverlayTrigger trigger="hover" placement="right" overlay={<PopoverComponent />}>
+        </OverlayTriggerComponent>
+        <OverlayTriggerComponent trigger="hover" placement="right" overlay={<Popover />}>
             <Button>Hover Popover</Button>
-        </OverlayTrigger>
+        </OverlayTriggerComponent>
     </ButtonToolbar>
 );
 
-export const PopoverTrigger = Template.bind({});
-PopoverTrigger.args = {
-};
+export const OverlayTrigger = Template.bind({});

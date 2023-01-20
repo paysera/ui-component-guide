@@ -1,11 +1,10 @@
 import React from 'react';
 import { FormGroupCheckbox as FormGroupCheckboxComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../../const';
 import withReduxForm from '../../utils/withReduxForm';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Forms/FormGroupCheckbox`,
+    title: 'Forms/FormGroupCheckbox',
     component: FormGroupCheckboxComponent,
     args: {
         label: 'Label',
@@ -55,6 +54,3 @@ export default {
 const Template = args => (<FormGroupCheckboxComponent {...args} />);
 
 export const FormGroupCheckbox = Template.bind({});
-
-FormGroupCheckbox.args = {
-};

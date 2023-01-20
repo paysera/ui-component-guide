@@ -1,11 +1,10 @@
 import React from 'react';
 import { FormGroupSelectSearch as FormGroupSelectSearchComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../../const';
 import withReduxForm from '../../utils/withReduxForm';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Forms/FormGroupSelectSearch`,
+    title: 'Forms/FormGroupSelectSearch',
     component: FormGroupSelectSearchComponent,
     args: {
         label: 'Label',
@@ -70,6 +69,3 @@ export default {
 const Template = args => (<FormGroupSelectSearchComponent {...args} />);
 
 export const FormGroupSelectSearch = Template.bind({});
-
-FormGroupSelectSearch.args = {
-};

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Col, Grid, Row } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { Col, Grid as GridComponent, Row } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import '../../styles/storybook.css';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Layout/Grid`,
-    component: Grid,
+    title: 'Layout/Grid',
+    component: GridComponent,
     argTypes: {
         fluid: {
             control: 'boolean',
@@ -24,7 +23,7 @@ export default {
 };
 
 const Template = args => (
-    <Grid {...args}>
+    <GridComponent {...args}>
         <Row>
             <Col xs={12} md={8}>
                 <code>
@@ -62,9 +61,7 @@ const Template = args => (
                 <code>{'<Col md={6} mdPull={6}/>'}</code>
             </Col>
         </Row>
-    </Grid>
+    </GridComponent>
 );
 
-export const GridComponent = Template.bind({});
-GridComponent.args = {
-};
+export const Grid = Template.bind({});

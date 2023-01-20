@@ -1,12 +1,12 @@
 import React from 'react';
-import { Tab, Tabs } from '@paysera/react-common';
-import { CHILDREN_TYPE, PAYSERA_COMPONENTS } from '../const';
+import { Tab, Tabs as TabsComponent } from '@paysera/react-common';
+import { CHILDREN_TYPE } from '../const';
 import { getComponentPropType } from '../utils/getComponentPropType';
 import { TABS_ID_OPTIONS, TABS_STYLE_OPTIONS } from './const/const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Tabs`,
-    component: Tabs,
+    title: 'Tabs Components/Tabs',
+    component: TabsComponent,
     args: {
         defaultActiveKey: 1,
         bsStyle: 'tabs',
@@ -52,7 +52,7 @@ export default {
 };
 
 const Template = args => (
-    <Tabs {...args}>
+    <TabsComponent {...args}>
         <Tab eventKey={1} title="Tab 1">
             Tab 1 content
         </Tab>
@@ -62,12 +62,10 @@ const Template = args => (
         <Tab eventKey={3} title="Tab 3">
             Tab 3 content
         </Tab>
-    </Tabs>
+    </TabsComponent>
 
 );
 
-export const TabsComponent = Template.bind({});
-TabsComponent.args = {
-};
+export const Tabs = Template.bind({});
 
-Tabs.displayName = 'Tabs';
+TabsComponent.displayName = 'Tabs';

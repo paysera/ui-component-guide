@@ -1,12 +1,11 @@
 import React from 'react';
 import { AndesTable } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../const';
 
 import data from './data/data';
 import { getFieldColumns } from './data/columns';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Table/AndesTable`,
+    title: 'Tables/AndesTable',
     component: AndesTable,
     includeStories: [],
 };

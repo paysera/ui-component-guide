@@ -1,11 +1,10 @@
 import React from 'react';
-import { Nav, NavItem } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { Nav, NavItem as NavItemComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Navs/NavItem`,
-    component: NavItem,
+    title: 'Navs/NavItem',
+    component: NavItemComponent,
     argTypes: {
         eventKey: {
             control: 'number',
@@ -38,12 +37,10 @@ export default {
 
 const Template = args => (
     <Nav>
-        <NavItem {...args}>
-            NavItem 1 content
-        </NavItem>
+        <NavItemComponent {...args}>
+            NavItemComponent 1 content
+        </NavItemComponent>
     </Nav>
 );
 
-export const NavItemComponent = Template.bind({});
-NavItemComponent.args = {
-};
+export const NavItem = Template.bind({});

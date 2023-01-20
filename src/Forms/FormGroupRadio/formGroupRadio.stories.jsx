@@ -1,11 +1,10 @@
 import React from 'react';
 import { FormGroupRadio as FormGroupRadioComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../../const';
 import withReduxForm from '../../utils/withReduxForm';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Forms/FormGroupRadio`,
+    title: 'Forms/FormGroupRadio',
     component: FormGroupRadioComponent,
     args: {
         label: 'Label',
@@ -58,6 +57,3 @@ export default {
 const Template = args => (<FormGroupRadioComponent {...args} />);
 
 export const FormGroupRadio = Template.bind({});
-
-FormGroupRadio.args = {
-};

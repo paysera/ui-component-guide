@@ -1,12 +1,11 @@
 import React from 'react';
-import { Popover } from '@paysera/react-common';
+import { Popover as PopoverComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../const';
 import { CHILDREN_TYPE, PLACEMENT_TYPE } from './const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Popover`,
-    component: Popover,
+    title: 'Popover Components/Popover',
+    component: PopoverComponent,
     args: {
         positionLeft: 200,
         positionTop: 50,
@@ -49,10 +48,10 @@ export default {
     },
 };
 
-export const PopoverComponent = args => (
+export const Popover = args => (
     <div style={{ height: 50 }}>
-        <Popover {...args}>
+        <PopoverComponent {...args}>
             And here is some amazing content
-        </Popover>
+        </PopoverComponent>
     </div>
 );

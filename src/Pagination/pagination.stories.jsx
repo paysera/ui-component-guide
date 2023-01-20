@@ -1,11 +1,10 @@
 import React from 'react';
-import { Pagination } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../const';
+import { Pagination as PaginationComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Pagination`,
-    component: Pagination,
+    title: 'Pagination',
+    component: PaginationComponent,
     args: {
         pages: 6,
         page: 4,
@@ -39,8 +38,6 @@ export default {
     },
 };
 
-const Template = args => <Pagination {...args} />;
+const Template = args => <PaginationComponent {...args} />;
 
-export const PaginationComponent = Template.bind({});
-PaginationComponent.args = {
-};
+export const Pagination = Template.bind({});

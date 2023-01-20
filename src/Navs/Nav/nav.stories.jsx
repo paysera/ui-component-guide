@@ -1,12 +1,11 @@
 import React from 'react';
-import { Nav, NavItem } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { Nav as NavComponent, NavItem } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import NAV_STYLE_OPTIONS from './const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Navs/Nav`,
-    component: Nav,
+    title: 'Navs/Nav',
+    component: NavComponent,
     args: {
         bsStyle: 'tabs',
     },
@@ -59,7 +58,7 @@ export default {
 };
 
 const Template = args => (
-    <Nav {...args}>
+    <NavComponent {...args}>
         <NavItem eventKey={1} href="/home">
             NavItem 1 content
         </NavItem>
@@ -69,9 +68,7 @@ const Template = args => (
         <NavItem eventKey={3} disabled>
             NavItem 3 content
         </NavItem>
-    </Nav>
+    </NavComponent>
 );
 
-export const NavComponent = Template.bind({});
-NavComponent.args = {
-};
+export const Nav = Template.bind({});

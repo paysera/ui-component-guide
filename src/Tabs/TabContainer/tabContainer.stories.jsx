@@ -1,12 +1,11 @@
 import React from 'react';
-import { TabContent, TabPane, TabContainer } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { TabContent, TabPane, TabContainer as TabContainerComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import { TABS_ID_OPTIONS } from '../const/const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Tabs/TabContainer`,
-    component: TabContainer,
+    title: 'Tabs Components/TabContainer',
+    component: TabContainerComponent,
     args: {
         defaultActiveKey: 1,
     },
@@ -32,7 +31,7 @@ export default {
 };
 
 const Template = args => (
-    <TabContainer {...args}>
+    <TabContainerComponent {...args}>
         <TabContent>
             <TabPane eventKey={1}>
                 Tab 1 content
@@ -44,11 +43,9 @@ const Template = args => (
                 Tab 3 content
             </TabPane>
         </TabContent>
-    </TabContainer>
+    </TabContainerComponent>
 );
 
-export const ContainerComponent = Template.bind({});
-ContainerComponent.args = {
-};
+export const TabContainer = Template.bind({});
 
 TabContainer.displayName = 'TabContainer';

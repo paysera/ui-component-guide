@@ -1,10 +1,9 @@
 import React from 'react';
-import { Table } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../const';
+import { Table as TableComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Table`,
+    title: 'Tables/Table',
     component: Table,
     argTypes: {
         striped: {
@@ -35,7 +34,7 @@ export default {
 };
 
 const Template = args => (
-    <Table {...args}>
+    <TableComponent {...args}>
         <thead>
             <tr>
                 <th />
@@ -63,9 +62,7 @@ const Template = args => (
                 <td>@twitter</td>
             </tr>
         </tbody>
-    </Table>
+    </TableComponent>
 );
 
-export const TableComponent = Template.bind({});
-TableComponent.args = {
-};
+export const Table = Template.bind({});

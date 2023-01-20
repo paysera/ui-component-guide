@@ -1,12 +1,11 @@
 import React from 'react';
-import { Button, ReactBootstrapModal } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { Button, ReactBootstrapModal as ReactBootstrapModalComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import { BACKDROP_TYPE } from './const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Modal/ReactBootstrapModal`,
-    component: ReactBootstrapModal,
+    title: 'Modal/ReactBootstrapModal',
+    component: ReactBootstrapModalComponent,
     argTypes: {
         customProps: {
             ...getComponentPropType(`{
@@ -41,7 +40,7 @@ export default {
 };
 
 const Template = args => (
-    <ReactBootstrapModal
+    <ReactBootstrapModalComponent
         {...args}
         Title={() => <div>Modal heading</div>}
         Body={({ hideModal }) => (
@@ -62,9 +61,7 @@ const Template = args => (
                 Click to open modal
             </Button>
         )}
-    </ReactBootstrapModal>
+    </ReactBootstrapModalComponent>
 );
 
-export const ReactModal = Template.bind({});
-ReactModal.args = {
-};
+export const ReactBootstrapModal = Template.bind({});

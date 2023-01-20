@@ -1,13 +1,12 @@
 import React, { useRef, useState } from 'react';
-import { Button, Overlay, Tooltip } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../const';
+import { Button, Overlay as OverlayComponent, Tooltip } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
 import { ANIMATION_TYPE, PLACEMENT_TYPE } from './const';
 import '../styles/storybook.css';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Overlay`,
-    component: Overlay,
+    title: 'Overlay',
+    component: OverlayComponent,
     args: {
         placement: 'top',
     },
@@ -64,12 +63,10 @@ const Template = (args) => {
             >
                 Click me!
             </Button>
-            <Overlay {...args} target={target.current} show={show}>
+            <OverlayComponent {...args} target={target.current} show={show}>
                 <Tooltip>Tooltip overload!</Tooltip>
-            </Overlay>
+            </OverlayComponent>
         </>
     );
 };
-export const OverlayComponent = Template.bind({});
-OverlayComponent.args = {
-};
+export const Overlay = Template.bind({});

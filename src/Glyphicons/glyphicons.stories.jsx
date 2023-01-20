@@ -1,10 +1,9 @@
 import React from 'react';
 import { Glyphicon as GlyphiconComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Glyphicons`,
+    title: 'Glyphicon',
     component: GlyphiconComponent,
     argTypes: {
         glyph: {
