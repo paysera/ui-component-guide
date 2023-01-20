@@ -1,5 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
+const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
+
+const modulesPath = path.resolve(__dirname, '../src');
 
 module.exports = {
     addons: [
@@ -16,6 +19,35 @@ module.exports = {
     stories: ['../src/**/*.stories.@(jsx|mdx)'],
     webpackFinal: async (config, { configType }) => {
         config.resolve.alias.modernizr$ = path.resolve(__dirname, '../node_modules/@paysera/modernizr-config/.modernizrrc.js');
+
+        const mdxRule = config.module.rules.find(rule => rule.test.toString() === /\.mdx$/.toString());
+        mdxRule.use.find(loader => loader.loader.includes('mdx1-csf')).options['compilers'] = [
+        createCompiler({}),
+        ];
+        
+        config.module.rules.push({
+            test: /\.mdx?$/,
+            include: [path.resolve(__dirname, '..')],
+            exclude: [/node_modules/],
+            use: [
+              {
+                loader: path.resolve(__dirname, 'mdx-code-block-rewrite'),
+              },
+            ],
+          });
+
+        // Load the whole example code of story files to display in docs.
+        config.module.rules.push({
+            test: /examples\/.*\.jsx?$/,
+            include: [modulesPath],
+            loaders: [
+            {
+                loader: path.resolve(__dirname, 'whole-source-loader'),
+            },
+            ],
+            enforce: 'pre',
+        });
+
         config.module.rules.push(
             {
                 test: /\.modernizrrc\.js$/,
