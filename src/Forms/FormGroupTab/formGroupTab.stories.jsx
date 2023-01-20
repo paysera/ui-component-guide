@@ -1,11 +1,10 @@
 import React from 'react';
 import { FormGroupTab as FormGroupTabComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../../const';
 import withReduxForm from '../../utils/withReduxForm';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Forms/FormGroupTab`,
+    title: 'Forms/FormGroupTab',
     component: FormGroupTabComponent,
     args: {
         label: 'Label',
@@ -45,6 +44,3 @@ export default {
 const Template = args => (<FormGroupTabComponent {...args} />);
 
 export const FormGroupTab = Template.bind({});
-
-FormGroupTab.args = {
-};

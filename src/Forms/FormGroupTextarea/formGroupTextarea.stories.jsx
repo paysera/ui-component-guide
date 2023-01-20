@@ -1,11 +1,10 @@
 import React from 'react';
 import { FormGroupTextarea as FormGroupTextareaComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../../const';
 import withReduxForm from '../../utils/withReduxForm';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Forms/FormGroupTextarea`,
+    title: 'Forms/FormGroupTextarea',
     component: FormGroupTextareaComponent,
     args: {
         label: 'Label',
@@ -48,6 +47,3 @@ export default {
 const Template = args => (<FormGroupTextareaComponent {...args} />);
 
 export const FormGroupTextarea = Template.bind({});
-
-FormGroupTextarea.args = {
-};

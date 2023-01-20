@@ -1,10 +1,9 @@
 import React from 'react';
 import { ButtonAnchor as ButtonAnchorComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Buttons/ButtonAnchor`,
+    title: 'Buttons/ButtonAnchor',
     component: ButtonAnchorComponent,
     argTypes: {
         action: {

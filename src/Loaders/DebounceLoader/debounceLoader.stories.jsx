@@ -1,10 +1,10 @@
 import React from 'react';
 import { DebounceLoader as DebounceLoaderComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { CHILDREN_TYPE, PAYSERA_COMPONENTS } from '../../const';
+import { CHILDREN_TYPE } from '../../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Loaders/DebounceLoader`,
+    title: 'Loaders/DebounceLoader',
     component: DebounceLoaderComponent,
     argTypes: {
         bounceTimeout: {

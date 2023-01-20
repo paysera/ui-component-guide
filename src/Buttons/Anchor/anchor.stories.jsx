@@ -1,10 +1,10 @@
 import React from 'react';
 import { Anchor as AnchorComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { HTML_TARGET_TYPES, PAYSERA_COMPONENTS } from '../../const';
+import { HTML_TARGET_TYPES } from '../../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Buttons/Anchor`,
+    title: 'Buttons/Anchor',
     component: AnchorComponent,
     args: {
         label: 'Label',
@@ -33,6 +33,3 @@ export default {
 const Template = args => (<AnchorComponent {...args} />);
 
 export const Anchor = Template.bind({});
-
-Anchor.args = {
-};

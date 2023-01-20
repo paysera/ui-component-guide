@@ -1,11 +1,10 @@
 import React from 'react';
 import { Form as FormComponent, FormGroup, FormGroupRadio } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../../const';
 import withReduxForm from '../../utils/withReduxForm';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Forms/Form`,
+    title: 'Forms/Form',
     component: FormComponent,
     decorators: [
         withReduxForm,
@@ -31,6 +30,3 @@ const Template = args => (
 );
 
 export const Form = Template.bind({});
-
-Form.args = {
-};

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Col, Row } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { Col as ColComponent, Row } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import '../../styles/storybook.css';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Layout/Col`,
-    component: Col,
+    title: 'Layout/Col',
+    component: ColComponent,
     args: {
         xs: 12,
         md: 8,
@@ -106,20 +105,18 @@ export default {
 const Template = args => (
     <>
         <Row>
-            <Col {...args}>
+            <ColComponent {...args}>
                 <code>
                     {'<Col xs={12} md={8}/>'}
                 </code>
-            </Col>
-            <Col {...args}>
+            </ColComponent>
+            <ColComponent {...args}>
                 <code>
                     {'<Col xs={12} md={8}/>'}
                 </code>
-            </Col>
+            </ColComponent>
         </Row>
     </>
 );
 
-export const ColComponent = Template.bind({});
-ColComponent.args = {
-};
+export const Col = Template.bind({});

@@ -1,10 +1,10 @@
 import React from 'react';
 import { LargeButton as LargeButtonComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { CHILDREN_TYPE, PAYSERA_COMPONENTS } from '../../const';
+import { CHILDREN_TYPE } from '../../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Buttons/LargeButton`,
+    title: 'Buttons/LargeButton',
     component: LargeButtonComponent,
     argTypes: {
         category: {

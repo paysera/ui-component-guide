@@ -1,11 +1,10 @@
 import React from 'react';
-import { Breadcrumb } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../const';
+import { Breadcrumb as BreadcrumbComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../utils/getComponentPropType';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Breadcrumb`,
-    component: Breadcrumb,
+    title: 'Breadcrumb',
+    component: BreadcrumbComponent,
     argTypes: {
         active: {
             control: 'boolean',
@@ -27,14 +26,15 @@ export default {
 };
 
 const Template = args => (
-    <Breadcrumb>
-        <Breadcrumb.Item {...args}>Home</Breadcrumb.Item>
-        <Breadcrumb.Item>Library</Breadcrumb.Item>
-        <Breadcrumb.Item>Data</Breadcrumb.Item>
-    </Breadcrumb>
+    <BreadcrumbComponent>
+        <BreadcrumbComponent.Item {...args}>Home</BreadcrumbComponent.Item>
+        <BreadcrumbComponent.Item>Library</BreadcrumbComponent.Item>
+        <BreadcrumbComponent.Item>Data</BreadcrumbComponent.Item>
+    </BreadcrumbComponent>
 );
 
-export const BreadcrumbComponent = Template.bind({});
-BreadcrumbComponent.args = {
+export const Breadcrumb = Template.bind({});
+
+Breadcrumb.args = {
     href: 'http://getbootstrap.com/components/#breadcrumbs',
 };

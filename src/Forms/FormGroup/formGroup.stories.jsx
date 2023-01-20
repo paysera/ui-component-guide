@@ -1,11 +1,10 @@
 import React from 'react';
 import { FormGroup as FormGroupComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { PAYSERA_COMPONENTS } from '../../const';
 import withReduxForm from '../../utils/withReduxForm';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Forms/FormGroup`,
+    title: 'Forms/FormGroup',
     component: FormGroupComponent,
     args: {
         label: 'Label',
@@ -61,6 +60,3 @@ export default {
 const Template = args => (<FormGroupComponent {...args} />);
 
 export const FormGroup = Template.bind({});
-
-FormGroup.args = {
-};

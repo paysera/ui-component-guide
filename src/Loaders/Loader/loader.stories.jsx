@@ -1,10 +1,10 @@
 import React from 'react';
 import { Loader as LoaderComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { CHILDREN_TYPE, PAYSERA_COMPONENTS } from '../../const';
+import { CHILDREN_TYPE } from '../../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Loaders/Loader`,
+    title: 'Loaders/Loader',
     component: LoaderComponent,
     args: {
         children: 'test',
@@ -31,5 +31,3 @@ export default {
 const Template = args => <LoaderComponent {...args} />;
 
 export const Loader = Template.bind({});
-Loader.args = {
-};

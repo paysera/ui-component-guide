@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Modal } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../const';
 import { getComponentPropType } from '../utils/getComponentPropType';
 import { BACKDROP_TYPE, MODAL_SIZE } from './const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Modal`,
+    title: 'Modal',
     component: Modal,
     argTypes: {
         bsSize: {
@@ -103,5 +102,3 @@ const Template = (args) => {
 };
 
 export const ModalComponent = Template.bind({});
-ModalComponent.args = {
-};

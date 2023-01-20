@@ -1,12 +1,12 @@
 import React from 'react';
-import { Alert } from '@paysera/react-common';
+import { Alert as AlertComponent } from '@paysera/react-common';
 import { ALERT_VARIANT } from './const';
 import { getComponentPropType } from '../utils/getComponentPropType';
-import { CHILDREN_TYPE, PAYSERA_COMPONENTS } from '../const';
+import { CHILDREN_TYPE } from '../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Alerts`,
-    component: Alert,
+    title: 'Alert',
+    component: AlertComponent,
     args: {
         children: 'some text',
     },
@@ -35,7 +35,7 @@ export default {
     },
 };
 
-const Template = args => <Alert {...args} />;
+const Template = args => <AlertComponent {...args} />;
 
 export const Success = Template.bind({});
 export const Danger = Template.bind({});

@@ -2,10 +2,10 @@ import React from 'react';
 import { Button } from '@paysera/react-common';
 import { BTN_SIZE_OPTIONS, BTN_STYLE_OPTIONS, BTN_TYPE_OPTIONS } from './const';
 import { getComponentPropType } from '../../utils/getComponentPropType';
-import { CHILDREN_TYPE, PAYSERA_COMPONENTS } from '../../const';
+import { CHILDREN_TYPE } from '../../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Buttons/Common Buttons`,
+    title: 'Buttons/Common Buttons',
     component: Button,
     args: {
         active: false,
@@ -65,9 +65,6 @@ export const Info = Template.bind({});
 export const Warning = Template.bind({});
 export const Danger = Template.bind({});
 export const Link = Template.bind({});
-
-Default.args = {
-};
 
 Primary.args = {
     bsStyle: 'primary',
