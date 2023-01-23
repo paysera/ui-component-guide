@@ -109,6 +109,10 @@ hr {
 pre {
   overflow: auto;
 }
+pre span,
+pre span.token.plain-text {
+  color: whitesmoke;
+}
 code,
 kbd,
 pre,
