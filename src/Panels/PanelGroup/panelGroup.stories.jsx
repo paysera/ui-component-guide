@@ -1,12 +1,11 @@
 import React from 'react';
-import { Panel, PanelGroup } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { Panel, PanelGroup as PanelGroupComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import { CHILDREN_TYPE } from '../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Panels/PanelGroup`,
-    component: PanelGroup,
+    title: 'Panels/PanelGroup',
+    component: PanelGroupComponent,
     args: {
     },
     argTypes: {
@@ -32,7 +31,7 @@ export default {
 };
 
 const Template = args => (
-    <PanelGroup {...args}>
+    <PanelGroupComponent {...args}>
         <Panel eventKey="1">
             <Panel.Heading>
                 <Panel.Title toggle>Panel heading 1</Panel.Title>
@@ -45,12 +44,10 @@ const Template = args => (
             </Panel.Heading>
             <Panel.Body collapsible>Panel content 2</Panel.Body>
         </Panel>
-    </PanelGroup>
+    </PanelGroupComponent>
 );
 
-export const PanelGroupComponent = Template.bind({});
-PanelGroupComponent.args = {
-};
+export const PanelGroup = Template.bind({});
 
 Panel.displayName = 'Panel';
-PanelGroup.displayName = 'PanelGroup';
+PanelGroupComponent.displayName = 'PanelGroup';

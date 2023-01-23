@@ -1,11 +1,10 @@
 import React from 'react';
 import { Panel } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import { CHILDREN_TYPE } from '../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Panels/PanelDefault`,
+    title: 'Panels/PanelDefault',
     component: Panel,
     args: {
     },

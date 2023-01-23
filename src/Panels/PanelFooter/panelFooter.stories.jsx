@@ -1,10 +1,9 @@
 import React from 'react';
 import { Panel } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Panels/PanelFooter`,
+    title: 'Panels/PanelFooter',
     component: Panel,
     argTypes: {
         bsClass: {
@@ -26,7 +25,5 @@ const Template = args => (
 );
 
 export const PanelFooter = Template.bind({});
-PanelFooter.args = {
-};
 
 Panel.displayName = 'Panel';
