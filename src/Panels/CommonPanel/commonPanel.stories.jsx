@@ -1,12 +1,11 @@
 import React from 'react';
-import { Panel } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../../const';
+import { Panel as PanelComponent } from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import { PANEL_STYLE_OPTIONS } from '../const';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/Panels/CommonPanel`,
-    component: Panel,
+    title: 'Panels/CommonPanel',
+    component: PanelComponent,
     argTypes: {
         bsStyle: {
             options: PANEL_STYLE_OPTIONS,
@@ -32,12 +31,12 @@ export default {
 };
 
 const Template = args => (
-    <Panel {...args}>
-        <Panel.Heading>
-            <Panel.Title>Panel heading</Panel.Title>
-        </Panel.Heading>
-        <Panel.Body>Panel content</Panel.Body>
-    </Panel>
+    <PanelComponent {...args}>
+        <PanelComponent.Heading>
+            <PanelComponent.Title>Panel heading</PanelComponent.Title>
+        </PanelComponent.Heading>
+        <PanelComponent.Body>Panel content</PanelComponent.Body>
+    </PanelComponent>
 );
 
 export const PanelSuccess = Template.bind({});
@@ -66,4 +65,4 @@ PanelDanger.args = {
     bsStyle: 'danger',
 };
 
-Panel.displayName = 'Panel';
+PanelComponent.displayName = 'Panel';

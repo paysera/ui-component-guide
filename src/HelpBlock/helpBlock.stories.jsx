@@ -1,12 +1,11 @@
 import React from 'react';
 import {
-    Form, FormGroup, HelpBlock,
+    Form, FormGroup, HelpBlock as HelpBlockComponent,
 } from '@paysera/react-common';
-import { PAYSERA_COMPONENTS } from '../const';
 import withReduxForm from '../utils/withReduxForm';
 
 export default {
-    title: `${PAYSERA_COMPONENTS}/HelpBlock`,
+    title: 'HelpBlock',
     component: Form,
     decorators: [
         withReduxForm,
@@ -16,8 +15,8 @@ export default {
 const Template = args => (
     <Form {...args}>
         <FormGroup placeholder="Test" />
-        <HelpBlock>I`m helper block</HelpBlock>
+        <HelpBlockComponent>I`m helper block</HelpBlockComponent>
     </Form>
 );
 
-export const HelpBlockComponent = Template.bind({});
+export const HelpBlock = Template.bind({});

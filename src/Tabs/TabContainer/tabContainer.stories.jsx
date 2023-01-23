@@ -1,5 +1,7 @@
 import React from 'react';
-import { TabContent, TabPane, TabContainer as TabContainerComponent } from '@paysera/react-common';
+import {
+    TabContent, TabPane, TabContainer as TabContainerComponent, Nav, NavItem,
+} from '@paysera/react-common';
 import { getComponentPropType } from '../../utils/getComponentPropType';
 import { TABS_ID_OPTIONS } from '../const/const';
 
@@ -32,17 +34,24 @@ export default {
 
 const Template = args => (
     <TabContainerComponent {...args}>
-        <TabContent>
-            <TabPane eventKey={1}>
-                Tab 1 content
-            </TabPane>
-            <TabPane eventKey={2}>
-                Tab 2 content
-            </TabPane>
-            <TabPane eventKey={3}>
-                Tab 3 content
-            </TabPane>
-        </TabContent>
+        <>
+            <Nav bsStyle="tabs" stacked>
+                <NavItem eventKey={1}>Tab 1</NavItem>
+                <NavItem eventKey={2}>Tab 2</NavItem>
+                <NavItem eventKey={3}>Tab 3</NavItem>
+            </Nav>
+            <TabContent>
+                <TabPane eventKey={1}>
+                    Tab 1 content
+                </TabPane>
+                <TabPane eventKey={2}>
+                    Tab 2 content
+                </TabPane>
+                <TabPane eventKey={3}>
+                    Tab 3 content
+                </TabPane>
+            </TabContent>
+        </>
     </TabContainerComponent>
 );
 
