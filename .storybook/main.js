@@ -1,11 +1,53 @@
 const webpack = require('webpack');
 const path = require('path');
+const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
+
+const modulesPath = path.resolve(__dirname, '../src');
 
 module.exports = {
-    addons: ['@storybook/addon-backgrounds/register'],
-    stories: ['../src/**/*.stories.jsx'],
+    addons: [
+        '@storybook/addon-backgrounds/register',
+        '@storybook/addon-essentials',
+        {
+            name: '@storybook/addon-docs',
+            options: {
+              sourceLoaderOptions: null,
+              transcludeMarkdown: true,
+            },
+        },
+    ],
+    stories: ['../src/**/*.stories.@(jsx|mdx)'],
     webpackFinal: async (config, { configType }) => {
         config.resolve.alias.modernizr$ = path.resolve(__dirname, '../node_modules/@paysera/modernizr-config/.modernizrrc.js');
+
+        const mdxRule = config.module.rules.find(rule => rule.test.toString() === /\.mdx$/.toString());
+        mdxRule.use.find(loader => loader.loader.includes('mdx1-csf')).options['compilers'] = [
+        createCompiler({}),
+        ];
+        
+        config.module.rules.push({
+            test: /\.mdx?$/,
+            include: [path.resolve(__dirname, '..')],
+            exclude: [/node_modules/],
+            use: [
+              {
+                loader: path.resolve(__dirname, 'mdx-code-block-rewrite'),
+              },
+            ],
+          });
+
+        // Load the whole example code of story files to display in docs.
+        config.module.rules.push({
+            test: /examples\/.*\.jsx?$/,
+            include: [modulesPath],
+            loaders: [
+            {
+                loader: path.resolve(__dirname, 'whole-source-loader'),
+            },
+            ],
+            enforce: 'pre',
+        });
+
         config.module.rules.push(
             {
                 test: /\.modernizrrc\.js$/,
@@ -19,14 +61,10 @@ module.exports = {
                         loader: require.resolve('css-loader'),
                         options: {
                             importLoaders: 1,
-                            modules: {
-                                localIdentName: '[name]__[local]___[hash:base64:5]'
-                            }
                         },
                     },
                     require.resolve('less-loader')
                 ],
-
             },
         );
         config.node = {

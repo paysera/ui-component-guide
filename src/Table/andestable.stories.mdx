@@ -1,0 +1,90 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { AndesTable } from '@paysera/react-common';
+import * as stories from './andestable.stories.jsx';
+
+import ExpanderComponent from './Components/ExpanderComponent';
+import data from './data/data';
+import { getFieldColumns } from './data/columns';
+import Default from './examples/Default';
+import WithExpander from './examples/WithExpander';
+import WithPagination from './examples/WithPagination';
+import WithFilters from './examples/WithFilters';
+
+<Meta
+    title="Tables/AndesTable"
+    component={AndesTable}
+    argTypes={{ ...stories.argTypes }}
+    args={{ ...stories.args }}
+/>
+
+## Table Porps
+
+| Name                   | Type             | default   | Description              |
+| ------------           | ---------------  | -------   | -----------------------  |
+| sortable               | boolean          | false     | click a column header to sort by its accessor & click it again to reverse the sort.
+| resizable              | boolean          | false     | resize information for this cell's column
+| filterable             | boolean          | false     | filter by checking if the row's value starts with the filter text
+| showPagination         | boolean          | false     | show the pagination element
+| horizontallyScrollable | boolean          | false     | add horizontal scroll when you run out of space
+| loading                | boolean          | false     | set to false if you data is fetched and can be displayed to the user, otherwise show the loading spinner
+| data                   | `Array<Object>`  | undefined | list of objects that will be accessible to each Column
+| columns                | `Array<Column>`  | undefined | list of Column's to display in each row of the table. for more info check [columns](?path=/docs/paysera-components-table-andestable-props--page#columns)
+| SubComponent           | `ReactNode`      | null      | you can put any component you want here, even another React Table! and you have access to the row-level data
+
+#### *for the full list of props and their use cases please check the props section*
+[Andes-Table Props](?path=/docs/paysera-components-table-andestable-props--page)
+
+---
+
+<ExampleCodeBlock code={Default} />
+
+## `With Expander`
+
+<ExampleCodeBlock code={WithExpander} />
+
+#### *SubComponent code*
+
+<details>
+
+```jsx
+  const ExpanderComponent = ({ original: { details } }) => (
+    <div className="expander-container">
+        <div className="row">
+            {details.map(({ payer, fee }) => (
+                <div className="col-md-12">
+                    <div className="detail-list">
+                        <div className="detail-label">
+                            <label className="control-label">
+                                <strong>Payer:</strong>
+                            </label>
+                        </div>
+                        <div className="detail-value">
+                            <div className="form-control-static">{payer}</div>
+                        </div>
+                    </div>
+                    <div className="detail-list" style={{ borderBottom: '1px solid #ddd' }}>
+                        <div className="detail-label">
+                            <label className="control-label">
+                                <strong>Fee:</strong>
+                            </label>
+                        </div>
+                        <div className="detail-value">
+                            <div className="form-control-static">{fee}</div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+);
+```
+
+</details>
+
+## `With Pagination`
+
+<ExampleCodeBlock code={WithPagination} />
+
+## `With Filters`
+
+<ExampleCodeBlock code={WithFilters} />
