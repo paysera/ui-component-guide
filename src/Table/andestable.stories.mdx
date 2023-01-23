@@ -5,6 +5,7 @@ import * as stories from './andestable.stories.jsx';
 import ExpanderComponent from './Components/ExpanderComponent';
 import data from './data/data';
 import { getFieldColumns } from './data/columns';
+import Default from './examples/Default';
 import WithExpander from './examples/WithExpander';
 import WithPagination from './examples/WithPagination';
 import WithFilters from './examples/WithFilters';
@@ -35,17 +36,7 @@ import WithFilters from './examples/WithFilters';
 
 ---
 
-<Canvas>
-  <Story
-    name="Default"
-    args={{
-        data: data,
-        columns: getFieldColumns,
-    }}
-  >
-  {stories.AndesDataTable.bind({})}
-  </Story>
-</Canvas>
+<ExampleCodeBlock code={Default} />
 
 ## `With Expander`
 
