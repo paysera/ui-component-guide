@@ -5,6 +5,9 @@ const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
 const modulesPath = path.resolve(__dirname, '../src');
 
 module.exports = {
+    core: {
+        builder: 'webpack5',
+      },
     addons: [
         '@storybook/addon-backgrounds/register',
         '@storybook/addon-essentials',
@@ -40,12 +43,12 @@ module.exports = {
         config.module.rules.push({
             test: /examples\/.*\.jsx?$/,
             include: [modulesPath],
-            loaders: [
+            rules: [
             {
                 loader: path.resolve(__dirname, 'whole-source-loader'),
             },
             ],
-            enforce: 'pre',
+            // enforce: 'pre',
         });
 
         config.module.rules.push(
@@ -67,9 +70,9 @@ module.exports = {
                 ],
             },
         );
-        config.node = {
-            fs: 'empty'
-        };
+        // config.node = {
+        //     fs: 'empty'
+        // };
         return config;
     },
 };

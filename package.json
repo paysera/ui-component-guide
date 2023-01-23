@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@paysera/react-common": "^3.17.3",
+    "@paysera/react-common": "^3.17.5",
     "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
     "bootstrap": "^3.4.1",
     "coa": "2.0.2",
     "font-awesome": "^4.7.0",
@@ -38,6 +40,7 @@
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
     "modernizr": "^3.11.4",
+    "webpack": "^5.75.0",
     "webpack-modernizr-loader": "^5.0.0"
   },
   "scripts": {

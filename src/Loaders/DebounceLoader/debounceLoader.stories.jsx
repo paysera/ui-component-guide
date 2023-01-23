@@ -15,7 +15,7 @@ export default {
             control: 'text',
             ...getComponentPropType(CHILDREN_TYPE),
         },
-        loader: {
+        loaded: {
             control: 'boolean',
             ...getComponentPropType('boolean', true),
         },
@@ -28,5 +28,5 @@ export const DebounceLoader = Template.bind({});
 DebounceLoader.args = {
     children: 'test',
     bounceTimeout: 1000,
-    loader: true,
+    loaded: false,
 };
