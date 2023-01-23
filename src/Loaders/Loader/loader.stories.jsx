@@ -21,7 +21,7 @@ export default {
         backgroundStyle: {
             ...getComponentPropType('string'),
         },
-        loader: {
+        loaded: {
             control: 'boolean',
             ...getComponentPropType('boolean', true),
         },
